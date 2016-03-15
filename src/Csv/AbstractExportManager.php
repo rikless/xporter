@@ -53,9 +53,11 @@ abstract class AbstractExportManager
     public function buildCsv(Builder $data)
     {
         $data->chunk(200, function ($rows) {
+
             foreach ($rows as $row) {
                 $this->csvManager->insertOne($this->transform($row));
             }
+            
         });
 
         return $this->csvManager->output(
