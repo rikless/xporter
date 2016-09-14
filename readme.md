@@ -8,7 +8,7 @@ With help of Laravels Xporter class creates exportable schema that can be easy m
 ###Installation
 Run :
 ```
-composer require rikless/xporter
+composer require rikless/xporter:1.*
 ```
 
 ###Example usage
