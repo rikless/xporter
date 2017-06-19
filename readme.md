@@ -3,24 +3,26 @@
 Xporter is a CSV wrapper allowing you to export Eloquent query results from your laravel application, using league/csv package.
 With help of Laravels Xporter class creates exportable schema that can be easy modified and reused.
 
-##Documentation
+## Documentation
 
-###Installation
-Run :
-```
+### Installation
+
+Run:
+```bash
 composer require rikless/xporter:1.*
 ```
 
-###Example usage
-Create a simple class where you'll have all your export parameter anywhere in your application. App\Exports may be a good place to start.
-You'll need to extend the Rikless\Xporter\Exportable class.
+### Example usage
 
-Now complete convert(), query() methods and xportable, rootModel properties.
+Create a simple class where you'll have all your export parameter anywhere in your application. `App\Exports` may be a good place to start.
+You'll need to extend the `Rikless\Xporter\Exportable` class.
 
-You have to use the convert() methods to transform your data, and add data from relationship.
+Now complete `convert()`, `query()` methods and `xportable`, `rootModel` properties.
 
-In your query method, you just need to instantiate your model and add your query. It can be anything from a Request object in your controller.
-Be aware to not use the get() or all() method in you query, because the package will chunk results. This mean that it needs an Illuminate\Database\Eloquent\Builder object.
+You have to use the `convert()` methods to transform your data, and add data from relationship.
+
+In your query method, you just need to instantiate your model and add your query. It can be anything from a `Request` object in your controller.
+Be aware to not use the `get()` or `all()` method in you query, because the package will chunk results. This mean that it needs an `Illuminate\Database\Eloquent\Builder` object.
 
 ```php
 <?php
@@ -74,5 +76,6 @@ class TestController extends Controller
 ```
 
 ### License
+
 Licensed under the [MIT license](http://opensource.org/licenses/MIT).
 
