@@ -4,6 +4,7 @@ namespace Rikless\Xporter\Csv;
 
 use Illuminate\Database\Eloquent\Builder;
 use League\Csv\Writer as CSV;
+use Illuminate\Support\Str;
 
 /**
  * Class AbstractExportManager
@@ -57,11 +58,11 @@ abstract class AbstractExportManager
             foreach ($rows as $row) {
                 $this->csvManager->insertOne($this->transform($row));
             }
-            
+
         });
 
         return $this->csvManager->output(
-            snake_case(class_basename(get_class($this))) . '-' . time() . '.csv'
+            Str::snake(class_basename(get_class($this))) . '-' . time() . '.csv'
         );
     }
 }
