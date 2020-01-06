@@ -40,7 +40,7 @@ abstract class AbstractExportManager
      */
     public function configureWriter()
     {
-        $this->csvManager->setDelimiter($this->delimiter)->setEncodingFrom('utf-8');
+        $this->csvManager->setDelimiter($this->delimiter);
 
         $this->csvManager->insertOne($this->getFields());
     }
