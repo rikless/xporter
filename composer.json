@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "league/csv": "7.*",
+        "league/csv": "9.*",
         "laravel/framework": ">=5.2.45"
         },
     "require-dev": {
