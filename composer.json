@@ -20,5 +20,10 @@
         "psr-4": {
             "Rikless\\Xporter\\": "src"
         }
+    },
+    "config": {
+        "allow-plugins": {
+            "kylekatarnls/update-helper": true
+        }
     }
 }
